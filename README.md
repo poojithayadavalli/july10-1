@@ -7,18 +7,18 @@ from the list which contains the following:
 a)the elements in the list are the pairs of numbers whose sum is equal to n in sorted order
 b)the list do not contain duplicate numbers and negative numbers if exists then ignore
 
-Contraints:
+Constraints:
 
-	2<=n<=10000
+2<=n<=10000
   
 input format:
 
- 	first line contains array of numbers
- 	second line contains number n
+first line contains array of numbers
+second line contains number n
   
 output format:
 
- 	inorder traversal of BinarySearch Tree if list is not empty else print -1
+inorder traversal of BinarySearch Tree if list is not empty else print -1
 
 Examples:
 
