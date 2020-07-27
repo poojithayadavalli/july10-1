@@ -20,7 +20,7 @@ def insert(root,node):
 def inorder(root): 
     if root: 
         inorder(root.left) 
-        print(root.val) 
+        print(root.val,end=" ") 
         inorder(root.right)
 
 arr = list(map(int,input().split()))
@@ -32,7 +32,6 @@ for i in range(len(arr)):
             l.append(arr[i])
         if n-arr[i] not in l:
             l.append(n-arr[i])
-print(*l)
 x=Node(l[0])
 for i in range(1, len(l)):
     insert(x, Node(l[i]))
