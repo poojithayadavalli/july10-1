@@ -14,7 +14,7 @@ def insert(root,node):
                 insert(root.right, node) 
         else: 
             if root.left is None: 
-                root.left = node 
+                root.left = node
             else: 
                 insert(root.left, node)
 def inorder(root): 
@@ -27,12 +27,22 @@ arr = list(map(int,input().split()))
 n = int(input())
 l = []
 for i in range(len(arr)):
-    if n - arr[i] in arr:
+    if n - arr[i] in arr and arr[i]!=n-arr[i]:
         if arr[i] not in l:
             l.append(arr[i])
         if n-arr[i] not in l:
             l.append(n-arr[i])
-x=Node(l[0])
-for i in range(1, len(l)):
-    insert(x, Node(l[i]))
-inorder(x)
+    elif n-arr[i] in arr and arr[i]==n-arr[i] and arr.count(arr[i])>0:
+        if arr[i] not in l:
+            l.append(arr[i])
+        if n-arr[i] not in l:
+            l.append(n-arr[i])
+        
+if len(l)>0:
+    x=Node(l[0])
+#print(*l)
+    for i in range(1, len(l)):
+        insert(x, Node(l[i]))
+    inorder(x)
+else:
+    print(-1)
